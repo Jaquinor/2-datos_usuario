@@ -1,2 +1,2 @@
 # datos_usuario
-Se introduce datos del usuario usando formularios Rasa
+Introduce datos del usuario usando formularios Rasa

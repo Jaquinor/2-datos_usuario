@@ -1,0 +1,104 @@
+version: '3.1'
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+
+  - tocar_tema
+  - charla
+  - solicitar_servicio
+  - parar
+  - nombre_usuario
+  - clave_usuario
+
+responses:
+
+# respuesta a temas de diálogo 
+
+  utter_tocar_tema/no_entrenado:  
+  - text: "Lo siento, mi función no es dialogar sobre ese tema, mi tema es la neumática."
+
+  utter_tocar_tema/neumatica:
+  - text: "Te puedo entrenar y asesorarte sobre esta tecnología"
+
+# respuestas a preguntas sobre Nacabot  
+
+  utter_tocar_tema/que_es_Nacabot:
+  - text: "Soy un agente conversacional, aprendiz de tecnología neumática"
+
+  utter_tocar_tema/funcion_nacabot:
+  - text: "Mi función es entrenar y asesorar a los usuarios"
+
+# respuesta a charla básica
+
+  utter_charla/saludar:
+  - text: "¡Hola!, ¿cómo te sientes hoy?"
+
+  utter_charla/buen_humor:
+  - text: "¡Excelente, me alegro!, ¿sobre que tema quieres dialogar?"
+
+  utter_charla/mal_humor:
+
+  - text: "Luego del invierno llega la primavera, ¿sobre que tema quieres dialogar? "
+
+  utter_charla/afirmar:
+  - text: "Tú afirmación fué recibida"
+
+  utter_charla/negar:
+  - text: "Tú negación fué recibida"
+
+  utter_charla/despedir:
+  - text: "Hasta luego, espero que pronto volvamos a dialogar..."
+
+#servicio
+
+  utter_confirmar_datos_usuario:
+  - text: "¿Tú nombre y clavesde usuario son {nombre_usuario} {clave_usuario}?"
+
+  utter_parar:
+  - text: "Tú solicitud de parada fué recibida"
+  
+
+  utter_ask_formulario_usuario_nombre_usuario:
+  - text: "¿Cuál es tú nombre de usuario?"
+
+  utter_ask_formulario_usuario_clave_usuario:
+  - text: "Dime tu clave de usuario, por favor"
+
+entities:
+
+- nombre_usuario
+- clave_usuario
+
+slots:
+
+  nombre_usuario:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nombre_usuario
+      intent: nombre_usuario
+  clave_usuario:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: clave_usuario
+      intent: clave_usuario
+
+forms:
+  formulario_usuario:
+    ignored_intents:
+    - tocar_tema
+    - charla
+    required_slots:
+    - nombre_usuario
+    - clave_usuario
+
+
+
+
+

@@ -1,0 +1,129 @@
+version: "3.1"
+
+nlu:
+
+# Temas para los cuales Nacabot no ha sido entrenado
+
+- intent: tocar_tema/no_entrenado
+  examples: |
+    - hora 
+    - tiempo
+    - clima
+    - nublado
+    - soleado
+    - frio
+    - calor
+    - lluvia
+    - politica
+    - presidente
+    - sexo
+    - religión
+    - biologia
+    - animal
+    - planta
+    - chistes
+
+- intent: tocar_tema/neumatica
+  examples: |
+     - neumática
+     - tecnología neumatica
+
+# preguntas frecuentes relacionados con Nacabot
+
+- intent: tocar_tema/que_es_Nacabot
+  examples: |
+    - ¿Eres un bot?
+    - ¿Eres un humano?
+    - ¿Qué eres?
+    - ¿Quien eres?   
+    - ¿Estoy hablando con un bot?
+    - ¿Estoy hablando con un humano?
+
+- intent: tocar_tema/funcion_nacabot
+  examples: |
+    - ¿cual es tu funcion?
+    - ¿para que sirves?
+    - ¿cuales son tus objetivos?
+    - ¿a que te dedicas?
+    - ¿Qué haces?
+    - ¿De qué te ocupas?
+
+#charlas
+
+- intent: charla/saludar
+  examples: |
+    - hola
+    - buenos dias
+    - buenas noches
+    - buenas tardes
+    - hola amigo
+    - epale
+    - que tal
+    - que hubo
+
+- intent: charla/buen_humor
+  examples: |
+    - bien
+    - feliz
+    - motivado
+    - alegre
+    - confiado
+
+- intent: charla/mal_humor
+  examples: |
+    - mal
+    - infeliz
+    - desmotivado
+    - triste
+    - desconfiado
+    - deprimido
+
+- intent: charla/afirmar
+  examples: |
+    - si
+    - afirmativo
+    - correcto
+    - siempre
+
+- intent: charla/negar
+  examples: |
+    - no
+    - negativo
+    - incorrecto
+    - nunca
+
+- intent: charla/despedir
+  examples: |
+    - te veo luego
+    - adios
+    - que tengas un lindo dia
+    - ya nos veremos
+    - hasta luego
+    - hasta pronte
+    - chau
+
+#servicio
+- intent: solicitar_servicio
+  examples: |
+    - servicio
+    - entrenar
+    - asesorar
+
+- intent: parar
+  examples: |
+    - detener
+    - parar
+    - suspender
+    - interrumpir
+
+- intent: nombre_usuario
+  examples: |
+    - [jaquinor](nombre_usuario)
+    - [aquino.ruilova](nombre_usuario)
+
+- intent: clave_usuario
+  examples: |
+    - [1234](clave_usuario) 
+    - [0000](clave_usuario)    
+
+

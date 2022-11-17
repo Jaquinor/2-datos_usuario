@@ -5,23 +5,13 @@ nlu:
 # Temas para los cuales Nacabot no ha sido entrenado
 
 - intent: tocar_tema/no_entrenado
-  examples: |
-    - hora 
-    - tiempo
-    - clima
-    - nublado
-    - soleado
-    - frio
-    - calor
-    - lluvia
-    - politica
-    - presidente
-    - sexo
-    - religión
-    - biologia
-    - animal
-    - planta
-    - chistes
+  examples: |  
+    - [clima](tema_no_entrenado)
+    - [politica](tema_no_entrenado)
+    - [sexo](tema_no_entrenado)
+    - [religión](tema_no_entrenado)
+    - [deporte](tema_no_entrenado)
+    - [turismo](tema_no_entrenado)
 
 - intent: tocar_tema/neumatica
   examples: |
@@ -35,7 +25,7 @@ nlu:
     - ¿Eres un bot?
     - ¿Eres un humano?
     - ¿Qué eres?
-    - ¿Quien eres?   
+    - ¿Quien eres?
     - ¿Estoy hablando con un bot?
     - ¿Estoy hablando con un humano?
 
@@ -84,6 +74,7 @@ nlu:
     - afirmativo
     - correcto
     - siempre
+    - confirmar
 
 - intent: charla/negar
   examples: |
@@ -118,12 +109,15 @@ nlu:
 
 - intent: nombre_usuario
   examples: |
-    - [jaquinor](nombre_usuario)
-    - [aquino.ruilova](nombre_usuario)
+    - [Usuario1](nombre_usuario)
+    - [Usuario2](nombre_usuario)
+    - [Usuario3](nombre_usuario)
 
-- intent: clave_usuario
+- intent: tipo_usuario
   examples: |
-    - [1234](clave_usuario) 
-    - [0000](clave_usuario)    
+    - [experto](tipo_usuario) 
+    - [vendedor](tipo_usuario)
+    - [cliente](tipo_usuario)
+
 
 

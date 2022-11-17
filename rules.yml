@@ -29,7 +29,9 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: utter_confirmar_datos_usuario
+  - action: utter_confirmar
+  - action: utter_nombre_usuario
+  - action: utter_tipo_usuario
   
 - rule: camino_no_feliz_en_formulario_usuario
   condition:
